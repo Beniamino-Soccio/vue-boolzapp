@@ -1,0 +1,39 @@
+body{
+    background-color: #dbdbd3;
+}
+#boolzapp{
+    border: 1px dashed red;
+    margin: 50px 200px;
+    height: calc(100vh - 100px);
+    display: flex;
+}
+#contacts{
+    width: 40%;
+    border: 2px solid green;
+    height: 100%;
+}
+#contacts > header {
+    border: 1px dashed red;
+    height: 10%;
+}
+#contacts > main{
+    border: 1px dashed rgb(17, 0, 255);
+    height: 90%;
+}
+#chat{
+    width: 60%;
+    border: 2px solid rgb(87, 0, 128);
+    height: 100%;
+}
+#chat > header{
+    height: 10%;
+    border: 1px dashed dodgerblue;
+}
+#chat > main{
+    border: 1px dashed rgb(17, 0, 255);
+    height: 80%;
+}
+#chat > footer{
+    border: 1px dashed rgb(255, 166, 0);
+    height: 10%;
+}
