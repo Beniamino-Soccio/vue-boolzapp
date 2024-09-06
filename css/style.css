@@ -2,53 +2,55 @@ body{
     background-color: #dbdbd3;
 }
 #boolzapp{
-    border: 1px dashed red;
+
     margin: 50px 200px;
     height: calc(100vh - 100px);
     display: flex;
 }
 img{
     border-radius: 50%;
-    max-width: 50px;
+    max-width: 60px;
 }
 #contacts{
     width: 40%;
-    border: 2px solid green;
     height: 100%;
 }
     #contacts > header {
-        border: 1px dashed red;
+    
         height: 10%;
         background-color: #eaeaea;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 15px;
+        border-right: 2px solid lightgray;
     }
         .my-name{
             display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
         }
         .icon-header *{
-            margin: 0 5px;
+            margin: 0 8px;
             color: #b1b1b1;
+            font-size: 24px;
         }
     #contacts > main{
-        border: 1px dashed rgb(17, 0, 255);
         height: 90%;
         background-color: #ffffff;
     }
 #chat{
     width: 60%;
-    border: 2px solid rgb(87, 0, 128);
     height: 100%;
 }
     #chat > header{
     height: 10%;
-    border: 1px dashed dodgerblue;
+
     background-color: #eaeaea;
     }
     #chat > main{
-        border: 1px dashed rgb(17, 0, 255);
+    
         height: 80%;
         background-image: url(../img/mine.png);
     }
@@ -59,7 +61,7 @@ img{
             background-color: #ffffff;
         }
     #chat > footer{
-        border: 1px dashed rgb(255, 166, 0);
+    
         height: 10%;
         background-color: #f3eeea;
     }
