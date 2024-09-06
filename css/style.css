@@ -12,11 +12,29 @@ img{
     border-radius: 50%;
     max-width: 60px;
 }
-#contacts{
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+li{
+    border-top: 1px solid lightgray;
+    padding: 6px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+li>div{
+    display: flex;
+    align-items: center;
+}
+#contacts-section{
     width: 40%;
     height: 100%;
 }
-    #contacts > header {
+    #contacts-section > header {
     
         height: 10%;
         background-color: #eaeaea;
@@ -37,7 +55,7 @@ img{
             color: #b1b1b1;
             font-size: 24px;
         }
-    #contacts > main{
+    #contacts-section > main{
         height: 90%;
         background-color: #fff;
     }
@@ -88,6 +106,18 @@ img{
             }
             .search-bar input{
                 width: calc(100% - 100px);
+            }
+        .contacts-chats{
+            overflow-y: scroll;
+        }
+            .contacts-chats p{
+                margin: 0 10px;
+                font-size: 18px;
+            }
+            .contacts-chats p:last-of-type{
+                font-size: 14px;
+                color: #929292;
+
             }
 #chat{
     width: 60%;

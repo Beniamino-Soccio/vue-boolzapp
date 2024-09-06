@@ -12,50 +12,68 @@
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <div id="boolzapp">
-        <div id="contacts">
-            <header>
-                <div class="my-name">
-                    <img src="img/avatar_io.png" alt="io">
-                    <p>Sofia</p>
-                </div>
-                <div class="icon-header">
-                    <i class="fa-solid fa-circle-notch"></i>
-                    <i class="fa-solid fa-message"></i>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
-            </header>
-
-            <main>
-                <div class="notification">
-                    <i class="fa-solid fa-bell-slash"></i>
-                    <div class="notification-text">
-                        <p>Ricevi notifiche di nuovi messaggi</p>
-                        <a href="#">Attiva notifiche desktop</a>
+    <div id="app">
+        <div id="boolzapp">
+            
+            <div id="contacts-section">
+                <header>
+                    <div class="my-name">
+                        <img src="img/avatar_io.png" alt="io">
+                        <p>Sofia</p>
                     </div>
-                </div>
-                <div class="search-bar">
-                    <form>
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
-                    </form>
-                </div>
-                <div class="contacts-chats"></div>
-            </main>
-        </div>
-        <div id="chat">
-            <header>
+                    <div class="icon-header">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </header>
 
-            </header>
-            <main>
+                <main>
+                    <div class="notification">
+                        <i class="fa-solid fa-bell-slash"></i>
+                        <div class="notification-text">
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                    <div class="search-bar">
+                        <form>
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        </form>
+                    </div>
+                    <div class="contacts-chats">
+                        <ul>
+                            <li v-for="contact in contacts">
+                                <div>
+                                    <img :src="contact.avatar" :alt="contact.name">
+                                    <div>
+                                        <p>{{ contact.name }}</p>
+                                        <!-- TODO da cambiare i lmessaggio con l'effettivo messaggio inviato-->
+                                        <p>Ultimo messaggio inviato</p>
+                                    </div>    
+                                </div>
+                                
+                                <p>12:00</p>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+            <div id="chat">
+                <header>
 
-            </main>
-            <footer>
+                </header>
+                <main>
 
-            </footer>
+                </main>
+                <footer>
+
+                </footer>
+            </div>
         </div>
     </div>
-
     <script src="js/script.js"></script>
 </body>
 </html>
