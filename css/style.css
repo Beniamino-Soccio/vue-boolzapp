@@ -7,33 +7,59 @@ body{
     height: calc(100vh - 100px);
     display: flex;
 }
+img{
+    border-radius: 50%;
+    max-width: 50px;
+}
 #contacts{
     width: 40%;
     border: 2px solid green;
     height: 100%;
 }
-#contacts > header {
-    border: 1px dashed red;
-    height: 10%;
-}
-#contacts > main{
-    border: 1px dashed rgb(17, 0, 255);
-    height: 90%;
-}
+    #contacts > header {
+        border: 1px dashed red;
+        height: 10%;
+        background-color: #eaeaea;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+        .my-name{
+            display: flex;
+        }
+        .icon-header *{
+            margin: 0 5px;
+            color: #b1b1b1;
+        }
+    #contacts > main{
+        border: 1px dashed rgb(17, 0, 255);
+        height: 90%;
+        background-color: #ffffff;
+    }
 #chat{
     width: 60%;
     border: 2px solid rgb(87, 0, 128);
     height: 100%;
 }
-#chat > header{
+    #chat > header{
     height: 10%;
     border: 1px dashed dodgerblue;
-}
-#chat > main{
-    border: 1px dashed rgb(17, 0, 255);
-    height: 80%;
-}
-#chat > footer{
-    border: 1px dashed rgb(255, 166, 0);
-    height: 10%;
-}
+    background-color: #eaeaea;
+    }
+    #chat > main{
+        border: 1px dashed rgb(17, 0, 255);
+        height: 80%;
+        background-image: url(../img/mine.png);
+    }
+        .sent{
+            background-color: #d5f9bb;
+        }
+        .received{
+            background-color: #ffffff;
+        }
+    #chat > footer{
+        border: 1px dashed rgb(255, 166, 0);
+        height: 10%;
+        background-color: #f3eeea;
+    }
