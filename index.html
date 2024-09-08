@@ -44,7 +44,7 @@
                     </div>
                     <div class="contacts-chats">
                         <ul>
-                            <li v-for="contact in contacts">
+                            <li v-for="contact in contacts" @click="selectContact(contact)">
                                 <div>
                                     <img :src="contact.avatar" :alt="contact.name">
                                     <div>
@@ -63,10 +63,34 @@
             </div>
             <div id="chat">
                 <header>
-
+                    <div v-if="activeContact" class="info-current-chat">
+                        <div class="info-contact-chat">
+                        <img :src="activeContact.avatar" :alt="activeContact.name">
+                        <div>
+                            <p>{{ activeContact.name }}</p>
+                            <!-- TODO da cambiare il messaggio con l'effettivo ultimo accesso -->
+                            <p>Ultimo accesso oggi alle 12:00</p>
+                        </div>
+                    </div>
+                        <div class="icon-header">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    
                 </header>
                 <main>
-
+                    <div v-if="activeContact">
+                        <ul>
+                            <li v-for="message in activeContact.messages">
+                                <div :class="{'sent': message.status === 'sent', 'received': message.status === 'received'}">
+                                    <p>{{ message.message }}</p> 
+                                    <p>{{ message.date }}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>    
                 </main>
                 <footer>
 

@@ -7,10 +7,12 @@ body{
     margin: 50px 200px;
     height: calc(100vh - 100px);
     display: flex;
+    border: 1px solid lightgray;
 }
 img{
     border-radius: 50%;
     max-width: 60px;
+    max-height: 60px;
 }
 ul{
     list-style-type: none;
@@ -20,13 +22,13 @@ ul{
     justify-content: center;
     flex-direction: column;
 }
-li{
+.contacts-chats li{
     border-top: 1px solid lightgray;
     padding: 6px 20px;
     display: flex;
     justify-content: space-between;
 }
-li>div{
+.contacts-chats li>div{
     display: flex;
     align-items: center;
 }
@@ -127,17 +129,55 @@ li>div{
     height: 10%;
     border-left: 1px solid lightgray;
     background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
     }
+        #chat .info-current-chat div p{
+            margin: 0 15px;
+        }
+        #chat .info-current-chat{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .icon-header{
+            align-content: end;
+        }
+        .info-contact-chat{
+            display: flex;
+            align-items: center;
+        }
     #chat > main{
-    
         height: 80%;
         background-image: url(../img/mine.png);
     }
+        #chat main ul li{
+            display: flex;
+            flex-direction: column;
+        }
+        #chat main li>div{
+            border-radius: 10px;
+            width: 35%;
+            padding: 5px 10px;
+            margin: 30px 20px 0 20px;
+        }
+        
+        #chat ul li div>p{
+            margin: 0;
+        }
+        #chat div>p:last-child{
+            font-size: 10px;
+            text-align: end;
+        }
         .sent{
             background-color: #d5f9bb;
+            align-self: flex-end;
         }
         .received{
-            background-color: #ffffff;
+            background-color: #fff;
         }
     #chat > footer{
     
