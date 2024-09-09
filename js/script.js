@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
       return {
-        activeContact: null,
+        activeContact: null, // solo per la parte del visualizzare il contatto mi ha dato mi ha aiutato un amico che era presente con me mentre stavo svolgendo l'esercizio
         newMessage: '',
         contacts: [
             {
@@ -180,9 +180,18 @@ createApp({
                 this.activeContact.messages.push({
                 message: this.newMessage,
                 status: 'sent',
+                date: new Date().toLocaleString(),
             });
               
             this.newMessage = '';
+
+            setTimeout(() => {
+                this.activeContact.messages.push({
+                  message: 'ok',
+                  status: 'received',
+                  date: new Date().toLocaleString(),
+                });
+              }, 1000);
             }
         }
     }
