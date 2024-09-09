@@ -4,6 +4,7 @@ createApp({
     data() {
       return {
         activeContact: null,
+        newMessage: '',
         contacts: [
             {
                 name: 'Michele',
@@ -174,6 +175,16 @@ createApp({
         selectContact(contact) {
             this.activeContact = contact; 
         },
+        sendMessage() {
+            if (this.newMessage.trim() !== '') {
+                this.activeContact.messages.push({
+                message: this.newMessage,
+                status: 'sent',
+            });
+              
+            this.newMessage = '';
+            }
+        }
     }
     
   }).mount('#app')
