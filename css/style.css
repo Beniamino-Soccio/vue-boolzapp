@@ -183,4 +183,18 @@ ul{
     
         height: 10%;
         background-color: #f3eeea;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 20px;
     }
+        #chat footer input{
+            width: 85%;
+            height: 40px;
+            border-color: transparent;
+            border-radius: 5px;
+        }
+        #chat footer i{
+            font-size: 24px;
+            color: gray;
+        }
