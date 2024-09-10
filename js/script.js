@@ -5,6 +5,7 @@ createApp({
       return {
         activeContact: null, // solo per la parte del visualizzare il contatto mi ha dato mi ha aiutato un amico che era presente con me mentre stavo svolgendo l'esercizio
         newMessage: '',
+        searchName: '',
         contacts: [
             {
                 name: 'Michele',
@@ -194,6 +195,5 @@ createApp({
               }, 1000);
             }
         }
-    }
-    
+    },
   }).mount('#app')
